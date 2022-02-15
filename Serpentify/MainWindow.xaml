@@ -1,0 +1,33 @@
+﻿<Window x:Class="Serpentify.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Serpentify" MinHeight="360" Height="360" MinWidth="445" Width="73" >
+    <Grid>
+        <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10,10" Width="87" VerticalAlignment="Bottom" Click="btn_Cancel_Click"/>
+        <Button x:Name="actionBtn" Content="Encrypt" HorizontalAlignment="Right" Margin="0,0,102,10" Width="87"  VerticalAlignment="Bottom" Click="actionBtn_Click"/>
+        <Label Content="Serpent Cipher | Parmaksiz" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,8" Width="157"/>
+        <DataGrid x:Name="DGAnz" Margin="10,137,10,39" />
+        <Menu Height="24" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Clear"></MenuItem>
+                <MenuItem Header="File"></MenuItem>
+                <Separator></Separator>
+                <MenuItem x:Name="Men_Exit" Header="Exit" Click="Men_Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Men_About" Header="About" Click="Men_About_Click">
+
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="inputBox" Height="23" Margin="87,37,102,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="keyBox" Height="23" Margin="87,65,102,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="keyBox_TextChanged" MaxLength="64"/>
+        <Label x:Name="keySizelbl" Content="KeySize:" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="133"/>
+        <Label Content="Input" HorizontalAlignment="Left" Margin="10,35,0,0" Width="53" VerticalAlignment="Top" RenderTransformOrigin="0.528,-0.346"/>
+        <Label Content="Key" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="53"/>
+        <RadioButton x:Name="radio_enc" Content="Encrypt" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,23,0" IsChecked="True" GroupName="enc" Checked="radio_enc_Checked"/>
+        <RadioButton x:Name="radio_dec" Content="Decrypt" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,68,22,0" GroupName="enc" Checked="radio_dec_Checked"/>
+        <RadioButton x:Name="rad256" Content="256 Bits" HorizontalAlignment="Right" Margin="0,109,21,0" VerticalAlignment="Top" GroupName="bits" Checked="rad256_Checked"/>
+        <RadioButton x:Name="rad192" Content="192 Bits" HorizontalAlignment="Right" Margin="0,109,84,0" VerticalAlignment="Top" GroupName="bits" Checked="rad192_Checked"/>
+        <RadioButton x:Name="rad128" Content="128 Bit" HorizontalAlignment="Right" Margin="0,109,147,0" VerticalAlignment="Top" GroupName="bits" Checked="rad128_Checked" IsChecked="True"/>
+
+    </Grid>
+</Window>
